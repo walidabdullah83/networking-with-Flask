@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome!</title>
+</head>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+    <table>
+        {% for entry in entries %}
+        <tr>
+            <td>
+                Question : {{ entry.question }}
+            </td>
+            <td>
+                Answer   : {{ entry.answer }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
